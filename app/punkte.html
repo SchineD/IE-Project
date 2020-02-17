@@ -1,0 +1,114 @@
+<html xmlns="http://www.w3.org/1999/html">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="src/css/main.css">
+
+
+
+<body>
+<div class="topnav" id="myTopnav">
+    <a href="./index.html"><img class="topimg" src="image\Home.png" alt="Home">Home</a>
+    <a href="./lernen.html"><img class="topimg" src="image\lehren.png" alt="Lehren">Lernen</a>
+    <a href="./training.html"><img class="topimg" src="image\training.png" alt="Uebne">Üben</a>
+    <a href="./pruefung.html"><img class="topimg" src="image\Test.png" alt="Pruefung" >Prüfung</a>
+    <a href="./punkte.html"><img class="topimg" src="image\punkt.png" alt="Punkten">Punkte</a>
+    <a href="javascript:void(0);" style="font-size:31px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+
+<div id="container">
+    <h1 class="header2">
+        <div id="text1"s>Highscores:</div>
+    </h1>
+
+    <table border="0" cellpadding="0" cellspacing="1" id="tabelle1">
+
+    </table>
+    </br>
+
+    <div id="showData" class="table">
+
+    </div>
+
+
+
+
+
+<script type="text/javascript" src="src/js/taffy.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
+<script>
+    db().remove();
+    db.store("mydb");
+    var recordsTest = db().get();
+    console.log(recordsTest);
+    var records = db().order("punkte desc").limit(10).select("user","punkte","alter");
+    // EXTRACT VALUE FOR HTML HEADER.
+    var col = [];
+    for (var i = 0; i < records.length; i++) {
+        for (var key in records[i]) {
+            if (col.indexOf(key) === -1) {
+                col.push(key);
+            }
+        }
+    }
+
+    // CREATE DYNAMIC TABLE.
+    var table = document.createElement("table");
+
+    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+    var tr = table.insertRow(-1);                   // TABLE ROW.
+
+    for (var i = 0; i < col.length; i++) {
+        var th = document.createElement("th");      // TABLE HEADER.
+        switch(i) {
+            case 2:
+                th.innerHTML = "Name";
+                tr.appendChild(th);
+                break;
+            case 1:
+                th.innerHTML = "Punkte";
+                tr.appendChild(th);
+                break;
+            case 0:
+                th.innerHTML = "Alter";
+                tr.appendChild(th);
+                break;
+        }
+    }
+
+    // ADD JSON DATA TO THE TABLE AS ROWS.
+    for (var i = 0; i < records.length; i++) {
+
+        tr = table.insertRow(-1);
+
+        for (var j = 0; j < col.length; j++) {
+            var tabCell = tr.insertCell(-1);
+            tabCell.innerHTML = records[i][col[j]];
+        }
+    }
+
+    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+    var divContainer = document.getElementById("showData");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>EinMalLeicht</title>
+
+        <link rel="stylesheet" href="src/css/main.css">
+
+    </head>
+
+    <body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="./index.html"><img class="topimg" src="image\Home.png" alt="Home">Home</a>
+        <a href="./lernen.html"><img class="topimg" src="image\lehren.png" alt="Lehren">Lernen</a>
+        <a href="./training.html"><img class="topimg" src="image\training.png" alt="Ueben">Üben</a>
+        <a href="./pruefung.html"><img class="topimg" src="image\Test.png" alt="Pruefung">Prüfung</a>
+        <a href="./punkte.html"><img class="topimg" src="image\punkt.png" alt="Punkten">Punkte</a>
+        <a href="javascript:void(0);" style="font-size:31px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+    <div id="container">
+        <h1 class="header">Rechnen - ganz einfach!</h1>
+        <p class="text">
+        </p>
+
+        <div class="responsivepic">
+            <div class="piccontainer">
+                <img class="picimage" src="image\piclehren.png" alt="LERNEN">
+                <a href="./lernen.html">
+                    <div class="picmiddle">
+                        <div class="pictext">LERNEN</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsivepic">
+            <div class="piccontainer">
+                <img class="picimage" src="image\pictraining.png" alt="UEBEN">
+                <a href="./training.html">
+                    <div class="picmiddle">
+                        <div class="pictext">ÜBEN</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsivepic">
+            <div class="piccontainer">
+                <img class="picimage" src="image\picprufung.png" alt="PRUFUNG">
+                <a href="./pruefung.html">
+                    <div class="picmiddle">
+                        <div class="pictext">PRÜFUNG</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsivepic">
+            <div class="piccontainer">
+                <img class="picimage" src="image\picpunkt.png" alt="PUNKTE">
+                <a href="./punkte.html">
+                    <div class="picmiddle">
+                        <div class="pictext">PUNKTE</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        </br>
+        </br>
+    </div>
+
+    <script type="text/javascript" scr="src/js/fragen.js"></script>
+
+
+    </body>
+</html>

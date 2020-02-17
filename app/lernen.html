@@ -1,0 +1,125 @@
+<html>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="src/css/main.css">
+
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="./index.html"><img class="topimg" src="image\Home.png" alt="Home">Home</a>
+            <a href="./lernen.html"><img class="topimg" src="image\lehren.png" alt="Lehren">Lernen</a>
+            <a href="./training.html"><img class="topimg" src="image\training.png" alt="Training">Training</a>
+            <a href="./pruefung.html"><img class="topimg" src="image\Test.png" alt="Pruefung" >Prüfung</a>
+            <a href="./punkte.html"><img class="topimg" src="image\punkt.png" alt="Punkten">Punkte</a>
+            <a href="javascript:void(0);" style="font-size:31px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+        <div id="container">
+            <h1 class="header">LERNEN</h1>
+            <div class="rechenarten">
+                <div class="rechenart">
+                    <h2 class="sub-header">Addition</h2>
+                    <div class="rechenart-info">
+                        <ul class="info text2">
+                            <li class="symbol">+</li>
+                            <li>Beispiel: 2 + 5 = 7</li>
+                            <li>Das Ergebnis der Addition ist die Summe</li>
+                            <li>Die Zahlen die addiert werden nennt man Summanden</li>
+                        </ul>
+                    </div>
+                    <div class="rechenart-text">
+                        <p class="text">Die Addition - oder Plusrechnung - zählt zwei (oder mehrere) Zahlenwerte zusammen. In unserem Beispiel (2 + 5 = 7) nimmt man die 2 und zählt einfach 5 dazu (Start: 2, 3, 4, 5, 6, 7) um die Summe 7 zu erhalten.</p>
+                    </div>
+                </div>
+
+                <div class="rechenart">
+                    <h2 class="sub-header">Subtraktion</h2>
+                    <div class="rechenart-info">
+                        <ul class="info text2">
+                            <li class="symbol">-</li>
+                            <li>Beispiel: 8 - 3 = 5</li>
+                            <li>Das Ergebnis der Subtraktion ist die Differenz</li>
+                            <li>Die Zahlen die subtrahiert werden nennt man Minuend (die Zahl von der eine andere Zahl subtrahiert wird) und Subtrahend (die Zahl die vom Minuenden abgezogen wird)</li>
+                        </ul>
+                    </div>
+                    <div class="rechenart-text">
+                        <p class="text">Die Subtraktion - oder Minusrechnung - nimmt einen Zahlenwert und zieht davon einen anderen Zahlenwert ab. In unserem Beispiel (8 - 3 = 5) nimmt man die 8 und zählt 3 Schritte rückwärts (Start: 8, 7, 6, 5), sodass man die Differenz 5 erhält.</p>
+                    </div>
+                </div>
+
+                <div class="rechenart">
+                    <h2 class="sub-header">Multiplikation</h2>
+                    <div class="rechenart-info">
+                        <ul class="info text2">
+                            <li class="symbol">*</li>
+                            <li>Beispiel: 4 * 6 = 24</li>
+                            <li>Das Ergebnis der Multiplikation ist das Produkt</li>
+                            <li>Die Zahlen die multipliziert werden nennt man Faktoren</li>
+                        </ul>
+                    </div>
+                    <div class="rechenart-text">
+                        <p class="text">Die Multiplikation funktioniert ähnlich der Addition. Der erste Zahlenwert unseres Beispiels (6 * 4 = 24) - also die 6 - wird die Anzahl des zweiten Zahlenwertes addiert - also 4mal. 6 + 6 + 6 + 6 = 24.</p>
+                    </div>
+                </div>
+
+                <div class="rechenart">
+                    <h2 class="sub-header">Division</h2>
+                    <div class="rechenart-info">
+                        <ul class="info text2">
+                            <li class="symbol">:</li>
+                            <li>Beispiel: 15 : 5 = 3</li>
+                            <li>Das Ergebnis der Divison ist der Quotient</li>
+                            <li>Die Zahlen die dividiert werden, nennt man Dividend (die Zahl die geteilt wird) und Divisor (auf soviele gleiche Teile wird der Dividend aufgeteilt)</li>
+                        </ul>
+                    </div>
+                    <div class="rechenart-text">
+                        <p class="text">Die Divison teilt den ersten Zahlenwert unseres Beispiels (15 : 5 = 3) - also die 15 - auf soviele gleich große Teile auf, wie der zweite Zahlenwert angibt - also 5. 15 aufgeteilt auf 5, ergibt 3.</p>
+                    </div>
+                </div>
+
+                <div class="rechenart">
+                    <h2 class="sub-header">Wichtige Regel</h2>
+                    <div class="rechenart-info">
+                        <ul class="info text2">
+                            <li>Beispiel: 4 + 3 * 2 = 10</li>
+                            <li>Punktrechnung vor Strichrechnung!</li>
+                        </ul>
+                    </div>
+                    <div class="rechenart-text">
+                        <p class="text">Die Multiplikation und die Division hat immer Vorrang vor der Addition und der Subtraktion. In unserem beispiel wird daher zuerst 3 * 2 = 6 ausgerechnet und erst dann das Ergebnis
+                        mit 4 addiert.</p>
+                    </div>
+                </div>
+
+                <div class="rechenart">
+                    <h2 class="sub-header">Wichtige Regel</h2>
+                    <div class="rechenart-info">
+                        <ul class="info text2">
+                            <li>Beispiel: (4 + 3) * 2 = 12</li>
+                            <li>Klammern haben absoluten Vorrang!</li>
+                        </ul>
+                    </div>
+                    <div class="rechenart-text">
+                        <p class="text">Obwohl wir nach der "Punkt- vor Strichrechnung"-Regel zuerst multiplizieren sollten, müssen wir IMMER zuerst die Teilrechnung innerhalb
+                        der Klammer lösen, bevor wir weiterrechnen dürfen. In unserem Beispiel wird also zuerst (4 + 3) = 6 ausgerechnet bevor das Teilergebnis dann mit 2 multipliziert wird
+                        6 * 2 = 12.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
